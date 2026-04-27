@@ -7,7 +7,7 @@
       "research_agent_supervisor": "./src/deep_research_from_scratch/multi_agent_supervisor.py:supervisor_agent",
       "research_agent_full": "./src/deep_research_from_scratch/research_agent_full.py:agent"
     },
-    "python_version": "3.11",
+    "python_version": "3.13",
     "env": ".env",
     "dependencies": [
       "."
