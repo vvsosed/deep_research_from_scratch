@@ -65,13 +65,13 @@ To maintain consistent code formatting across the generated source files, run ru
 
 ```bash
 # Check for formatting issues
-uv run ruff check src/
+uvx ruff check src/
 
 # Auto-fix formatting issues where possible
-uv run ruff check src/ --fix
+uvx ruff check src/ --fix
 
 # Check specific file
-uv run ruff check src/deep_research_from_scratch/research_agent.py
+uvx ruff check src/deep_research_from_scratch/research_agent.py
 ```
 
 **Common formatting fixes needed:**
