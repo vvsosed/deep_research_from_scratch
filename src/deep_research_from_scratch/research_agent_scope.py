@@ -9,6 +9,7 @@ The workflow uses structured output to make deterministic decisions about
 whether sufficient context exists to proceed with research.
 """
 
+import os
 from datetime import datetime
 from typing_extensions import Literal
 
@@ -28,8 +29,11 @@ def get_today_str() -> str:
 
 # ===== CONFIGURATION =====
 
-# Initialize model
-model = init_chat_model(model="google_genai:gemini-3-flash-preview", temperature=0.0)
+# Initialize model from RESEARCH_AGENT_MODEL env var (see .env)
+model = init_chat_model(
+    model=os.environ["RESEARCH_AGENT_MODEL"],
+    temperature=0.0,
+)
 
 # ===== WORKFLOW NODES =====
 
