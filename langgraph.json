@@ -1,7 +1,8 @@
 {
   "dockerfile_lines": [],
   "graphs": {
-    "scope_research": "./src/deep_research_from_scratch/research_agent_scope.py:scope_research"
+    "scope_research": "./src/deep_research_from_scratch/research_agent_scope.py:scope_research",
+    "research_agent_mcp": "./src/deep_research_from_scratch/research_agent_mcp.py:agent_mcp"
   },
   "python_version": "3.13",
   "env": ".env",

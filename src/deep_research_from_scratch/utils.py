@@ -5,6 +5,7 @@ This module provides search and content processing utilities for the research ag
 including web search capabilities and content summarization tools.
 """
 
+import os
 from pathlib import Path
 from datetime import datetime
 from typing_extensions import Annotated, List, Literal
@@ -39,7 +40,10 @@ def get_current_dir() -> Path:
 
 # ===== CONFIGURATION =====
 
-summarization_model = init_chat_model(model="openai:gpt-4.1-mini")
+# Match the env-var pattern used by research_agent_mcp.py / research_agent_scope.py
+# so the model can be configured via .env without requiring an OPENAI_API_KEY when
+# the user has chosen a non-OpenAI provider (e.g. Google Gemini).
+summarization_model = init_chat_model(model=os.getenv("SUMMARIZATION_MODEL", "openai:gpt-4.1-mini"))
 tavily_client = TavilyClient()
 
 # ===== SEARCH FUNCTIONS =====
