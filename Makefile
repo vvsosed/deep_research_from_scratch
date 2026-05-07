@@ -10,7 +10,7 @@ SHELL := /bin/bash
 #   make logs    # tail the server log file
 #   make run     # run langgraph dev in the foreground
 
-PYTHON_VERSION ?= 3.11
+PYTHON_VERSION ?= 3.13
 HOST ?= 127.0.0.1
 PORT ?= 2024
 START_TIMEOUT ?= 60

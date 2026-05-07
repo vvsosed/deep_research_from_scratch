@@ -20,11 +20,11 @@ cd deep_research_from_scratch
 
 ## 3. (Optional) Pin / install Python
 
-`pyproject.toml` requires `>=3.11,<3.14`. `uv` will auto-fetch a matching interpreter, but you can be explicit:
+`pyproject.toml` requires `>=3.13,<3.14`. `uv` will auto-fetch a matching interpreter, but you can be explicit:
 
 ```bash
-uv python install 3.11
-uv python pin 3.11
+uv python install 3.13
+uv python pin 3.13
 ```
 
 ## 4. Sync the environment
@@ -117,7 +117,7 @@ make run      # foreground
 Override defaults inline if needed:
 
 ```bash
-make start PYTHON_VERSION=3.12 HOST=0.0.0.0 PORT=2024
+make start PYTHON_VERSION=3.13 HOST=0.0.0.0 PORT=2024
 ```
 
 ## Useful day-to-day `uv` commands
