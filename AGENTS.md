@@ -22,21 +22,28 @@ deep_research_from_scratch/
 │   ├── state_*.py
 │   └── utils.py
 │
-└── README.md # Comprehensive documentation; has to be kept up to date
+├── deprecated/                      # Archived files (IGNORE)
+│   └── README.md                    # Old top-level README, no longer maintained
+│
+└── Bootstrap.md                     # Project bootstrap guide (uv-based); keep up to date
 ```
 
 ## 🚨 Important Development Workflow
 
 **The notebooks in `src/` and subfolders are the source under development and should be the ONLY files modified.**
 
-The source code in `notebooks/` is for reference and educational purposes only
+The source code in `notebooks/` is for reference and educational purposes only.
+
+The `deprecated/` folder contains archived files that are no longer maintained — agents must ignore them when reasoning about the project, generating context, or proposing changes.
 
 ### Development Guidelines
 
 - ❌ **DON'T** edit notebooks in `notebooks/` directory
 - ❌ **DON'T** run notebook cells to regenerate source code
 - ❌ **DON'T** test changes by running the notebooks
+- ❌ **DON'T** read, edit, cite, or use as context anything inside `deprecated/`
 - ✅ **Edit**  files in `src` and its subfolders
+- ✅ **Refer** to `Bootstrap.md` for environment setup, dependency management, and run commands
 
 ## System Architecture
 
@@ -55,7 +62,7 @@ The system implements a three-phase deep research workflow:
 
 ## Quick Start for Development
 
-To be added soon
+See [`Bootstrap.md`](./Bootstrap.md) for the full setup walkthrough (installing `uv`, syncing dependencies, configuring `.env`, running notebooks, and starting the LangGraph dev server via the `Makefile`).
 
 ## Code Quality and Formatting
 
